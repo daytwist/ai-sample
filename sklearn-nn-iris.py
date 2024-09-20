@@ -8,6 +8,8 @@ iris = datasets.load_iris()
 df_iris = pd.DataFrame(data=iris.data, columns=iris.feature_names)
 df_iris["target"] = iris.target
 
+print(df_iris.describe())
+
 data_train, data_test, target_train, target_test = train_test_split(
     iris.data, iris.target, test_size=0.2, random_state=0
 )
